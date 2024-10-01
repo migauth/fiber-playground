@@ -1,16 +1,17 @@
+/* eslint-disable react/no-unknown-property */
+import "./App.css";
+import { Canvas } from '@react-three/fiber'
+import Box from "./Box";
 
-import './App.css'
 
 function App() {
-
   return (
     <>
-    <div>
-      <h1 className='text-red-500 text-6xl'>hi</h1>
-
-    </div>
+      <Canvas camera={{ position: [0, 0, 2] }}>
+        <Box />
+      </Canvas>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
