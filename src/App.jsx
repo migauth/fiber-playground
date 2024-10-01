@@ -8,7 +8,8 @@ function App() {
   return (
     <>
       <Canvas camera={{ position: [0, 0, 2] }}>
-        <Box />
+        <Box position={[-0.75, 0, 0]} name="A" scale={[0.5, 0.5, 0.5]}/>
+        <Box position={[0.75, 0, 0]} name="B"/>
       </Canvas>
     </>
   );
