@@ -14,5 +14,5 @@ Oct 2
 - OrbitControls
 
 Oct 3
-- <PointerLockControls />: creates a first person view
-- <axisHelper />: adds colorful lines at x y z
+- `<PointerLockControls />`: creates a first person view
+- `<axisHelper />`: adds colorful lines at x y z
