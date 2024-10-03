@@ -17,4 +17,5 @@ Oct 3
 - `<PointerLockControls />`: creates a first person view
 - `<axisHelper />`: adds colorful lines at x y z
 - `<gridHelper />`: adds a grid
-- Liva: a GUI component to interact with scene - import { useControls } from 'leva'
+- Liva: a GUI component to interact with scene 
+  - import { useControls } from 'leva'
