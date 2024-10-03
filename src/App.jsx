@@ -1,10 +1,11 @@
+/* eslint-disable react/no-unknown-property */
 import "./App.css";
 import { Canvas } from "@react-three/fiber";
 import Polyhedron from "./Polyhedron";
 import { OrbitControls } from "@react-three/drei";
 import * as THREE from 'three'
-// import { Stats } from "@react-three/drei";
-import { Perf } from 'r3f-perf'
+import { Stats } from "@react-three/drei";
+// import { Perf } from 'r3f-perf'
 
 
 export default function App() {
@@ -21,14 +22,9 @@ export default function App() {
         <Polyhedron position={[0.75, -0.75, 0]} polyhedron={polyhedron} />
         <Polyhedron position={[-0.75, 0.75, 0]} polyhedron={polyhedron} />
         <Polyhedron position={[0.75, 0.75, 0]} polyhedron={polyhedron} />
-        <OrbitControls 
-        minAzimuthAngle={-Math.PI / 4}
-        maxAzimuthAngle={Math.PI / 4}
-        minPolarAngle={Math.PI / 6}
-        maxPolarAngle={Math.PI - Math.PI / 6}
-
-        />
-        <Perf position="top-left"/>
+        <OrbitControls />
+        <Stats />
+        <axesHelper args={[5]} />
       </Canvas>
     </>
   );
