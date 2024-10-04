@@ -18,4 +18,15 @@ Oct 3
 - `<axisHelper />`: adds colorful lines at x y z
 - `<gridHelper />`: adds a grid
 - Liva: a GUI component to interact with scene 
-  - import { useControls } from 'leva'
+
+Oct 4
+- Materials
+  - MeshBasicMaterial: Use when lighting is unnecessary and you want a flat, simple color/texture.
+  - MeshNormalMaterial: Use for debugging or if you want a stylized, geometric look that highlights the 3D shape.
+  - MeshPhongMaterial: Use when you want shiny, glossy surfaces with highlights.
+  - MeshStandardMaterial: Use for the most realistic material that interacts with light as real-world objects do, with control over roughness and metalness.
+- Lights
+  - Ambient Light: Provides uniform lighting across the scene, illuminating all objects equally without casting shadows.
+  - Directional Light: Simulates sunlight by emitting parallel rays from a specific direction, casting shadows and highlighting surfaces.
+  - Point Light: Emits light in all directions from a single point, similar to a light bulb, with falloff over distance.
+  - Spot Light: Casts a focused beam of light in a specific direction, like a flashlight, often used for highlighting specific areas or objects.
