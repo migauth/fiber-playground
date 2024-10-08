@@ -34,3 +34,4 @@ Oct 4
 
 Oct 7
 - useLoader -  used in React Three Fiber to pre-cache any assets in memory, uses a texture module in the example
+- GLTFLoader - used to load 3d models, uses an example from blender
