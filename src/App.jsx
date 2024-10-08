@@ -5,39 +5,46 @@ import * as THREE from "three";
 import { Canvas, useLoader } from "@react-three/fiber";
 import { Stats, OrbitControls } from "@react-three/drei";
 import { useControls } from "leva";
-import { useRef } from 'react'
+import { useRef } from "react";
 import Floor from "./Floor";
 
 function Lights() {
+  const directionalRef = useRef();
 
-  const directionalRef = useRef() 
-  
-  useControls("Directional Light", {
-    visible: true,
+  useControls('Directional Light', {
+    intensity: {
+      value: 1,
+      min: 0,
+      max: 5,
+      step: 0.1,
+      onChange: (v) => {
+        directionalRef.current.intensity = v
+      },
+    },
+
     position: {
       x: 3.3,
       y: 1.0,
       z: 4.4,
+      onChange: (v) => {
+        directionalRef.current.position.copy(v);
+      },
     },
-    castShadow: true,
   });
 
-  return (
-    <>
-    <directionalLight ref={directionalRef}  castShadow />
-    </>
-  );
+  return <directionalLight ref={directionalRef} castShadow />;
 }
 
 export default function App() {
+  const texture = useLoader(THREE.TextureLoader, './img/grid.png')
+
   return (
     <Canvas shadows camera={{ position: [4, 4, 1.5] }}>
       <Lights />
       <Polyhedron
         name="meshBasicMaterial"
         position={[-3, 1, 0]}
-        material={new THREE.MeshBasicMaterial({ color: 'yellow' })}
-
+        material={new THREE.MeshBasicMaterial({ color: "yellow" })}
       />
       <Polyhedron
         name="meshNormalMaterial"
@@ -48,7 +55,7 @@ export default function App() {
         name="meshPhongMaterial"
         position={[1, 1, 0]}
         material={
-          new THREE.MeshPhongMaterial({ color: 'lime', flatShading: true })
+          new THREE.MeshPhongMaterial({ flatShading: true, map: texture })
         }
       />
       <Polyhedron
@@ -56,13 +63,13 @@ export default function App() {
         position={[3, 1, 0]}
         material={
           new THREE.MeshStandardMaterial({
-            color: 0xff0033,
             flatShading: true,
+            map: texture,
           })
         }
       />
       <Floor />
-      <OrbitControls target={[2, 2, 0]} />
+      <OrbitControls target={[0, 1, 0]} />
       <axesHelper args={[5]} />
       <gridHelper />
       <Stats />

@@ -33,4 +33,4 @@ Oct 4
 - Shadows
 
 Oct 7
-- useLoader
+- useLoader -  used in React Three Fiber to pre-cache any assets in memory, uses a texture module in the example
