@@ -30,3 +30,7 @@ Oct 4
   - Directional Light: Simulates sunlight by emitting parallel rays from a specific direction, casting shadows and highlighting surfaces.
   - Point Light: Emits light in all directions from a single point, similar to a light bulb, with falloff over distance.
   - Spot Light: Casts a focused beam of light in a specific direction, like a flashlight, often used for highlighting specific areas or objects.
+- Shadows
+
+Oct 7
+- useLoader
