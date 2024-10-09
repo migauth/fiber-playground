@@ -32,7 +32,10 @@ Oct 4
   - Spot Light: Casts a focused beam of light in a specific direction, like a flashlight, often used for highlighting specific areas or objects.
 - Shadows
 
-Oct 7
+Oct 8
 - useLoader -  used in React Three Fiber to pre-cache any assets in memory, uses a texture module in the example
 - GLTFLoader - used to load 3d models, uses an example from blender
 - Environment - creates a background and creates reflections on 3d models
+
+Oct 9
+- Advancing GLTF scenes - The glTF specification provides a way to describe whole scenes which may include a large hierarchy of other 3D objects, as well as lighting, animations, materials, textures, skeletons, morph targets, cameras and even other scenes.
