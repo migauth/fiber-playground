@@ -39,3 +39,6 @@ Oct 8
 
 Oct 9
 - Advancing GLTF scenes - The glTF specification provides a way to describe whole scenes which may include a large hierarchy of other 3D objects, as well as lighting, animations, materials, textures, skeletons, morph targets, cameras and even other scenes.
+
+Oct 10
+- useGLTF - create models in blender and export them as glb files. Models are loaded dynamically using the useGLTF hook.
