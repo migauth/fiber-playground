@@ -43,3 +43,4 @@ Oct 9
 Oct 10
 - useGLTF - create models in blender and export them as glb files. Models are loaded dynamically using the useGLTF hook.
 - annotations - Drei’s Html component allows you to place HTML elements within the 3D scene and have them interact seamlessly. You can add these annotations directly in Blender by embedding metadata (like userData) into the model. For each relevant part of the model, you can add a prop property to the userData, which stores the annotation text.
+- GLTFJSX - GLTFJSX is a command line tool that will read through a glTF model, and extract its components into a JSX equivalent.
